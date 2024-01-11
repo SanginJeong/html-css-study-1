@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <script src="https://kit.fontawesome.com/3e7a68d981.js" crossorigin="anonymous"></script>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  header{
+    padding: 12px 24px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  header button{
+    background: none;
+    border: none;
+    padding: 8px;
+  }
+  header button:hover{
+    border-radius: 50%;
+    background-color: grey;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  main{
+    text-align: center;
+    height: 450px;
+  }
+  main > div{
+    padding: 12px 24px;
+  }
+  main input{
+    width: 800px;
+    padding: 12px 0px;
+    border-radius: 12px;
+    padding-left: 35px;
+  }
+  main button{
+    border: none;
+    padding: 12px 24px;
+  }
+  .mic{
+    background: none;
+    position: relative;
+    right: 60px;
+  }
+  footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #f2f2f2;
+  }
+  .footer_firstLine{
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .footer_secondLine{
+    display: flex;
+    justify-content: space-around;
+  }
+  .search{
+    position: relative;
+    left: 35px;
+  }
+  
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="#">Google 정보</a>
+      <a href="#">스토어</a>
+    </div>
+    <div>
+      <a href="#">Gmail</a>
+      <a href="#">이미지</a>
+      <button><i class="fa-solid fa-bars"></i></button>
+      <button>로그인</button>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+    </div>
+    <div>
+      <i class="fa-solid fa-magnifying-glass search"></i>
+      <input type="text"/>
+      <button class="mic"><i class="fa-solid fa-microphone"></i></button>
+    </div>
+    <div>
+      <button>Google Search</button>
+      <button>I'm Feeling Lucky</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer_firstLine">
+      <h3>대한민국</h3>
+    </div>
+    <div class="footer_secondLine">
+      <div>
+        <a href="#">광고</a>
+        <a href="#">비즈니스</a>
+        <a href="#">검색의 원리</a>
+      </div>
+      <div>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">약관</a>
+        <a href="#">설정</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
