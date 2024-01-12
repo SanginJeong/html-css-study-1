@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      padding: 12px 24px;
+      font-size: 24px;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      background-color: black;
+      color: white;
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+    }
+    .q1{
+      display: flex;
+      justify-content: space-between;
+    }
+    .rows{
+      display: flex;
+    }
+    .q2_1,.q2_2,.q2_3{
+      display: flex;
+    }
+    .q2_2{
+      justify-content: center;
+    }
+    .q2_3{
+      justify-content: flex-end;
+    }
+    .lgBox{
+      width: 400px;
+      height: 400px;
+      background-color: grey;
+      position: relative;  
+    }
+    .smallBox{
+      position: absolute;
+      left: 40px;
+      top: 40px;
+    }
+    .q3{
+      display: flex;
+      justify-content: center;
+    }
+    .second{
+      background-color: grey;
+      position: relative;
+      left: 100px;
+      top: -100px;
+    }
+    .q5{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .wrapbox{
+      width: 800px;
+      height: 600px;
+      background-color: grey;
+      position: relative;
+    }
+    .rightbox{
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .underbox{
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+    }
+    .q1,.q2,.q3,.q4,.q5{
+      display: none;
+    }
+    .q1.active{
+      display: flex;
+    }
+    .q2.active{
+      display: block;
+    }
+    .q3.active{
+      display: flex;
+    }
+    .q4.active{
+      display: block;
+    }
+    .q5.active{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button onclick="showQuestion(1)">문제 1</button>
+    <button onclick="showQuestion(2)">문제 2</button>
+    <button onclick="showQuestion(3)">문제 3</button>
+    <button onclick="showQuestion(4)">문제 4</button>
+    <button onclick="showQuestion(5)">문제 5</button>
+  </div>
+  <h2 id = questionNumber></h2>
+  <div class="q1">
+    <div>
+      <div class="box box1">div1</div>
+    </div>
+    <div class="rows">
+      <div class="box box2">div2</div>
+      <div class="box box3">div3</div>
+    </div>
+  </div>
+
+  <div class="q2">
+    <div class="q2_1">
+      <div class="box">div1</div>
+    </div>
+    <div class="q2_2">
+      <div class="box">div2</div>
+    </div>
+    <div class="q2_3">
+      <div class="box">div3</div>
+    </div>
+  </div>
+  
+  <div class="q3">
+    <div class="box lgBox">
+      div1
+      <div class="box smallBox">div2</div>
+    </div>
+  </div>
+  
+  <div class="q4">
+    <div class="box">div1</div>
+    <div class="box second">div2</div>
+  </div>
+
+  <div class="q5">
+    <div class="box wrapbox">div1
+      <div class="box underbox">div2</div>
+      <div class="box rightbox">div3</div>
+    </div>
+  </div>
+
+  <script>
+    const showQuestion = (index) => {
+      const $questionNumber = document.querySelector('#questionNumber');
+      for(let i=1; i<=5; i++){
+        if(i === index){
+          document.querySelector(`.q${i}`).classList.add('active');
+          $questionNumber.textContent = `문제${i}`
+        }
+        else document.querySelector(`.q${i}`).classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
