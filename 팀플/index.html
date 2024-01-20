@@ -20,15 +20,15 @@
           height="24"
           class="d-inline-block align-text-top"
         />
-
         <i class="fas fa-pen"></i>
         Coding School
       </a>
+      <!--부트스트랩 토글바 생성-->
       <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -38,52 +38,32 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Study</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Study
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Html + Css</a>
-              <a class="dropdown-item" href="#">Java</a>
-              <a class="dropdown-item" href="#">Python</a>
-              <a class="dropdown-item" href="#">Java script</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">etc</a>
-            </div>
+            <a class="nav-link" href="#teacher_area">SELECT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Notice</a>
+            <a class="nav-link" href="#curriculum">STUDY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#review_area">REVIEW</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <div class="input-group">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <div class="input-group-append">
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </div>
-          </div>
-        </form>
+        <div class="d-flex">
+          <a class="nav-link" href="./loginForm.html" style="margin-right: 30px"
+            >login</a
+          >
+          <a
+            class="nav-link"
+            href="./registerForm.html"
+            style="margin-right: 30px"
+          >
+            join</a
+          >
+        </div>
       </div>
+
     </div>
   </nav>
   <!-- navbar 종료 -->
@@ -172,7 +152,7 @@
     </main>
     <!-- 사이드 스크롤바 종료 -->
     <!-- 강사소개 -->
-    <div class="teacher_area">
+    <div class="teacher_area" id="teacher_area">
       <h3 class="part">강사소개</h3>
       <div class="teacher">
         <div>
@@ -184,11 +164,11 @@
           <h4 class="teacher_name">홍수환 강사</h4>
         </div>
         <div>
-          <img src="./KakaoTalk_20231028_212243640.jpg" alt="">
+          <img style="height: 309px;" src="./IMG_4526.JPG" alt="">
           <h4 class="teacher_name">김상진 강사</h4>
         </div>
         <div>
-          <img src="./KakaoTalk_20231028_212243640.jpg" alt="">
+          <img src="./IMG_7702.jpeg" alt="">
           <h4 class="teacher_name">이지은 강사</h4>
         </div>
 
@@ -201,9 +181,9 @@
     <!-- 강사소개 종료 -->
     <!-- 커리큘럼 -->
     <!-- 상진님 row태그 전체를 따로 커리큘럼 태그만들어서 안에다가 넣어놨습니다 css만들때 참고해주세요 -->
-    <div class="curriculum">
+    <div class="curriculum " id="curriculum">
       <h3 class="part">커리큘럼</h3>
-      <div class="row">
+      <div class="row card-text-padding ">
         <div class="card col-lg-4 col-md-4 col-sm-6 card_padding card_margin" style="width: 22rem;">
           <img style="width: 326px; height: 260px; border-radius: 14px;" src="https://cdn.inflearn.com/public/courses/329946/cover/29659d88-4456-435c-a687-001797b74928/329946-eng.png" class="card-img-top ">
           <div class="card-body">
@@ -316,7 +296,7 @@
     </div>
     <!-- 커리큘럼 종료 -->
     <!-- 리뷰 -->
-    <div class="review_area">
+    <div class="review_area" id="review_area">
       <h3 class="part">수강후기</h3>
       <div class="review_row">
         <div class="review">
